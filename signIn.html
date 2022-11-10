@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/2ea2780247.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_style.css">
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="head_bar" class="head_div" style="text-align: center; width: 100%; height: 30px; color: #fff; background-color: #959595;">
+        <h4>FREE SHIPPING ON ALL ORDERS</h4>
+    </div>
+    <nav id="nav_bar" class="nav_bar">  
+        <div class="nav_left">
+            <div id="slide_bar_div" onclick="navbr()" class="nav_slide_bar_buttom">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <script>
+                let navbr =()=>{
+                    let nav_bar_slide=document.getElementById("nav_bar_slide");
+                    nav_bar_slide.style.position="absolute"
+                    nav_bar_slide.style.left="0px",
+                    nav_bar_slide.style.transition="all 1s ease-in 0s"
+                    console.log("nav bar is working")
+                }
+            </script>
+            <div class="img_div">
+                <img src="logo-2018-new3.png" class="nav_logo_img" alt="brack_slat_logo">
+            </div>
+            <div class="nav_itm_div">
+                <div id="n_men" class="nav_itm" onclick="but1()" >
+                    MEN <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <script>
+                    let but1=()=>{
+                        let man_slide = document.getElementById("man_slid_div");
+                        let women_slide = document.getElementById("women_slid_div");
+                        let sin_sli = document.getElementById("sign_slid_div");
+                        man_slide.style.display="flex";
+                        women_slide.style.display="none";
+                        women_slide.style.display="none";
+                        man_slide.style.opacity = "1";
+                        man_slide.style.marginTop = "0";
+                        man_slide.style.transition = "all 0.5s ease-in 0s";
+                        console.log("but1 is working")
+                    }
+                </script>
+                <div id="n_wem" class="nav_itm" onclick="but2()">
+                    WOMEN <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <script>
+                    let but2=()=>{
+                        let women_slide = document.getElementById("women_slid_div");
+                        let man_slide = document.getElementById("man_slid_div");
+                        let sin_sli = document.getElementById("sign_slid_div");
+                        women_slide.style.display="flex";
+                        man_slide.style.display="none";
+                        sin_sli.style.display="none";
+                        women_slide.style.opacity = "1";
+                        women_slide.style.marginTop = "0";
+                        women_slide.style.transition = "all 0.5s ease-in 0s";
+                        console.log("but1 is working")
+                    }
+                </script>
+                <div id="n_sig" class="nav_itm" onclick="but3()" >
+                    SIGNATURE <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <script>
+                    let but3 = () =>{
+                        let women_slide = document.getElementById("women_slid_div");
+                        let man_slide = document.getElementById("man_slid_div");
+                        let sin_sli = document.getElementById("sign_slid_div");
+                        man_slide.style.display="none";
+                        women_slide.style.display="none";
+                        sin_sli.style.display="flex";
+                        sin_sli.style.opacity = "1";
+                        sin_sli.style.marginTop = "0";
+                        sin_sli.style.transition = "all 0.5s ease-in 0s";
+                        console.log("but3 is working")
+                    }
+                </script>
+                <div id="n_sig" class="nav_itm" >
+                    LIMITED EDITION <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <div id="n_sig" class="nav_itm" >
+                    SIGN IN <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="nav_right">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span><i class="fa-solid fa-sack-dollar"></i></span>
+        </div>
+    </nav>
+    <div id="nav_bar_slide" class="nav_bar_slide">
+        <div class="nav_slide_bar_itm">
+            <div class="input_sear_nav">
+                <input type="text" name="nav_slide_input" id="nav_slide_search_bar" class="nav_slide_input" placeholder="Search Products">
+            </div>
+            <div id="n_men" onclick="n_men()" class="nav_itm nav_slide_itm" >
+                MEN <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <script>
+                let n_men =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <div id="n_wem" onclick="n_wem()" class="nav_itm nav_slide_itm" >
+                WOMEN <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <script>
+                let n_wem =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <div id="n_sin"onclick="n_sin()" class="nav_itm nav_slide_itm" >
+                SIGNATURE <span><i class="fa-solid fa-angle-right"></i></i></span>
+            </div>
+            <script>
+                let n_sin =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <div id="n_LED" onclick="n_LED()" class="nav_itm nav_slide_itm" >
+                LIMITED EDITION <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <script>
+                let n_LED =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <div id="n_sig" onclick="n_sig()" class="nav_itm nav_slide_itm" >
+                SIGN IN <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <script>
+                let n_sig =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+        </div>
+    </div>
+    <div class="container_sign_in">
+        <div class="sign_In_div">
+            <h2>Login</h2>
+            <fieldset>
+                <form action="" method="" enctype="multipart/form-data">
+                    <label for="Usr_email">User or email address</label><br><br>
+                    <input type="text" name="Usr_email" id="Usr_email" class="Usr_email sign_input_box" value="" autocomplete="off"><br><br>
+                    <label for="Usr_email">Password</label><br><br>
+                    <input type="password" name="Usr_email" id="Usr_email" class="Usr_email sign_input_box" value="" autocomplete="off"><br><br>
+                    <label for="">Social Sign In;</label><br><br>
+                    <button type="submit" name="logIn_btn" id="logIn_btn" class="logIn_btn" value="">Log In</button>
+                    <input type="checkbox" name="remember" id="remember">
+                    <Label for="remember">Remember Me</Label><br><br>
+                    <a href="#" style="color: #959595; text-decoration:none;">Lost Your Password</a>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <footer class="fot_sec_div">
+        <div class="Ab_div">
+            <h4>ABOUT US</h4>
+            <hr>
+            <a href="https://myenchanter.com/our-brand-story-2/" class="a_link">Our Brand Story</a><br>
+            <a href="https://myenchanter.com/stones-meanings">Stones & Meanings</a><br>
+            <select name="country" id="country" class="cou_sele">
+                <option id="Myn" class="sel_op" value="" selected>
+                    <div>
+                        MMK <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        VND <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        TWD <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        QAR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        INR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        OMR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        IDR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        THB <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+            </select>
+        </div>
+        <div class="Ab_div cus_care">
+            <h4>CUSTOMER CARE</h4>
+            <hr>
+            <a href="https://myenchanter.com/return-refund/">Return & Refund</a><br>
+            <a href="https://myenchanter.com/care-repair/">Care & Repair</a><br>
+            <a href="https://myenchanter.com/size-guide/">Size Guide</a><br>
+            <a href="https://myenchanter.com/faqs/">FAQs</a><br>
+            <a href="https://myenchanter.com/privacy-policy/">Privacy Policy</a><br>
+            <a href="https://myenchanter.com/tracking/">Tracking Package</a>
+        </div>
+        <div class="Ab_div acc">
+            <h4>MY ACCOUNT</h4>
+            <hr>
+            <a href="https://myenchanter.com/my-account/">My Account</a><br>
+            <a href="https://myenchanter.com/create-an-account-with-us/">Create Account</a><br>
+            <a href="https://myenchanter.com/my-account/orders/">My Order</a><br>
+            <a href="https://myenchanter.com/cart/">Shopping Cat</a>
+        </div>
+        <div class="Ab_div new_upd">
+            <h4>NEWS & UPDATES</h4>
+            <hr>
+            <p>Sign up to get the latest on sales,new releses and more...</p>
+            <div class="up_mail_div">
+                <input type="email" name="sign_up_mail" id="sign_up_mail" class="up_mail_box" placeholder="Enter your email address..">
+                <button>Sign Up</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

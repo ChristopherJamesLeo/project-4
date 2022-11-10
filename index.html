@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project_4</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/2ea2780247.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_style.css">
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="head_bar" class="head_div" style="text-align: center; width: 100%; height: 30px; color: #fff; background-color: #959595;">
+        <h4>FREE SHIPPING ON ALL ORDERS</h4>
+    </div>
+    <nav id="nav_bar" class="nav_bar">  
+        <div class="nav_left">
+            <div id="slide_bar_div" onclick="navbr()" class="nav_slide_bar_buttom">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <script>
+                let navbr =()=>{
+                    let nav_bar_slide=document.getElementById("nav_bar_slide");
+                    nav_bar_slide.style.position="absolute"
+                    nav_bar_slide.style.left="0px",
+                    nav_bar_slide.style.transition="all 1s ease-in 0s"
+                    console.log("nav bar is working")
+                }
+            </script>
+            <div class="img_div">
+                <img src="logo-2018-new3.png" class="nav_logo_img" alt="brack_slat_logo">
+            </div>
+            <div class="nav_itm_div">
+                <div id="n_men" class="nav_itm" onclick="but1()" >
+                    MEN <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <script>
+                    let but1=()=>{
+                        let man_slide = document.getElementById("man_slid_div");
+                        let women_slide = document.getElementById("women_slid_div");
+                        let sin_sli = document.getElementById("sign_slid_div");
+                        man_slide.style.display="flex";
+                        women_slide.style.display="none";
+                        women_slide.style.display="none";
+                        man_slide.style.opacity = "1";
+                        man_slide.style.marginTop = "0";
+                        man_slide.style.transition = "all 0.5s ease-in 0s";
+                        console.log("but1 is working")
+                    }
+                </script>
+                <div id="n_wem" class="nav_itm" onclick="but2()">
+                    WOMEN <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <script>
+                    let but2=()=>{
+                        let women_slide = document.getElementById("women_slid_div");
+                        let man_slide = document.getElementById("man_slid_div");
+                        let sin_sli = document.getElementById("sign_slid_div");
+                        women_slide.style.display="flex";
+                        man_slide.style.display="none";
+                        sin_sli.style.display="none";
+                        women_slide.style.opacity = "1";
+                        women_slide.style.marginTop = "0";
+                        women_slide.style.transition = "all 0.5s ease-in 0s";
+                        console.log("but1 is working")
+                    }
+                </script>
+                <div id="n_sig" class="nav_itm" onclick="but3()" >
+                    SIGNATURE <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <script>
+                    let but3 = () =>{
+                        let women_slide = document.getElementById("women_slid_div");
+                        let man_slide = document.getElementById("man_slid_div");
+                        let sin_sli = document.getElementById("sign_slid_div");
+                        man_slide.style.display="none";
+                        women_slide.style.display="none";
+                        sin_sli.style.display="flex";
+                        sin_sli.style.opacity = "1";
+                        sin_sli.style.marginTop = "0";
+                        sin_sli.style.transition = "all 0.5s ease-in 0s";
+                        console.log("but3 is working")
+                    }
+                </script>
+                <div id="n_sig" class="nav_itm" >
+                    LIMITED EDITION <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <a href="signIn.html" style="text-decoration: none; color:inherit">
+                    <div id="n_sig" class="nav_itm" >
+                        SIGN IN <span><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="nav_right">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span><i class="fa-solid fa-sack-dollar"></i></span>
+        </div>
+    </nav>
+    <div id="nav_bar_slide" class="nav_bar_slide">
+        <div class="nav_slide_bar_itm">
+            <div class="input_sear_nav">
+                <input type="text" name="nav_slide_input" id="nav_slide_search_bar" class="nav_slide_input" placeholder="Search Products">
+            </div>
+            <div id="n_men" onclick="n_men()" class="nav_itm nav_slide_itm" >
+                MEN <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <script>
+                let n_men =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <div id="n_wem" onclick="n_wem()" class="nav_itm nav_slide_itm" >
+                WOMEN <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <script>
+                let n_wem =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <div id="n_sin"onclick="n_sin()" class="nav_itm nav_slide_itm" >
+                SIGNATURE <span><i class="fa-solid fa-angle-right"></i></i></span>
+            </div>
+            <script>
+                let n_sin =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <div id="n_LED" onclick="n_LED()" class="nav_itm nav_slide_itm" >
+                LIMITED EDITION <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <script>
+                let n_LED =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+            <a href="signIn.html" style="text-decoration: none; color:inherit">
+                <div id="n_sig" onclick="n_sig()" class="nav_itm nav_slide_itm" >
+                    SIGN IN <span><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </a>
+            <script>
+                let n_sig =()=>{
+                let nav_bar_slide=document.getElementById("nav_bar_slide");
+                nav_bar_slide.style.left="-300px",
+                nav_bar_slide.style.transition="all 1s ease-in 0s"
+                console.log("nav bar is working")
+                }
+            </script>
+        </div>
+    </div>
+    <section class="sec_1">
+        <div id="sec_lat_con" class="sec_1_latter_div">
+            <div class="latter_head_div"  >
+                <div id="B" class="B lat_mai_cl">B</div>&nbsp;
+                <div id="E" class="E lat_mai_cl">E</div>&nbsp;&nbsp;&nbsp;
+                <div id="T" class="T lat_mai_cl">T</div>&nbsp;
+                <div id="H" class="H lat_mai_cl">H</div>&nbsp;
+                <div id="se_E" class="se_E lat_mai_cl">E</div>&nbsp;&nbsp;&nbsp;
+                <div id="th_E" class="th_E lat_mai_cl">E</div>&nbsp;
+                <div id="N" class="N lat_mai_cl">N</div>&nbsp;
+                <div id="fo_E" class="fo_E lat_mai_cl">E</div>&nbsp;
+                <div id="R" class="R lat_mai_cl">R</div>&nbsp;
+                <div id="G" class="G lat_mai_cl">G</div>&nbsp;
+                <div id="Y" class="Y lat_mai_cl">Y</div>
+            </div>
+            <div class="latter_sec_head_div">
+                <div id="se_Y" class="lat_int_cl se_Y">Y</div>&nbsp;
+                <div id="O" class="lat_int_cl O">O</div>&nbsp;
+                <div id="U" class="lat_int_cl U">U</div>&nbsp;&nbsp;&nbsp;
+                <div id="W" class="lat_int_cl W">W</div>&nbsp;
+                <div id="A" class="lat_int_cl A">A</div>&nbsp;
+                <div id="sec_N" class="lat_int_cl sec_N">N</div>&nbsp;
+                <div id="sec_T" class="lat_int_cl sec_T">T</div>&nbsp;&nbsp;&nbsp;
+                <div id="th_T" class="lat_int_cl th_T">T</div>&nbsp;
+                <div id="sec_O" class="lat_int_cl sec_O">O</div>&nbsp;&nbsp;&nbsp;
+                <div id="sec_A" class="lat_int_cl sec_A">A</div>&nbsp;
+                <div id="fo_T" class="lat_int_cl fo_T">T</div>&nbsp;
+                <div id="fi_T" class="lat_int_cl fi_T">T</div>&nbsp;
+                <div id="th_A" class="lat_int_cl th_A">A</div>&nbsp;
+                <div id="C" class="lat_int_cl C">C</div>&nbsp;
+                <div id="six_T" class="lat_int_cl six_T">T</div>&nbsp;
+            </div>
+            <div id="sec_lat_para" class="latter_thi_head_div">
+                <p>Your Vibes Speak Louder <br>Than Any Words Could Ever</p>
+            </div>
+            <div  class="latter_head_buttom_con_div">
+                <div id="sec_but_latter" class="latter_head_buttom_div">
+                    VIEW COLLECTION
+                </div>   
+            </div>
+
+        </div>
+        <div class="sec_1_img_div">
+            <img src="banner-home-new.jpg" class="sec_1_img" alt="brack_slat_logo_1">
+        </div>
+    </section>
+    <section style="text-align: center; color:#888888; padding: 40px 15% ">
+        <h3>DISCOVER THE WORLD OF ENERGIES</h3>
+        <p>Uniquely Taylor-Made Beaded Bracelets and Accessories for the stylish Men & Women. We source our natural stones from partners all  over the world to fit your wrist perfectly in style. We will continue our passion into adventuring to the ends of the earth to source from  Mother Nature’s Best. Because we know whats’ special and we hold true to our commitment for what truly matters to you.</p>
+    </section>
+    <section class="banner_sec_sect">
+        <div class="banner_sec_img_div">
+            <img src="banner-home-new2.jpg" class="banner_home_new2" alt="our_advanture_never_stop">
+        </div>
+        <div class="banner_sec_sect_lat">
+            <div class="sect_lat_div">
+                <span>SECTRE PAYMENTS</span>
+            </div>
+            <div class="sect_lat_div">
+                <span>FREE WORLDWIDE EXPRESS DELIVERY</span>
+            </div>
+            <div class="sect_lat_div">
+                <span>30-DAY MONEY BACK GUARANTEE</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="banner_thi_sec_div">
+            <div class="separator"></div>
+            <h3 >FEATURES</h3>
+            <p>We are constantly sourcing for that exquisitely and unique natural stones possible. The smile on our face will always be enchanting because whenever we found something unique and beautiful, we’ll know if you’ll love it. Featuring 3 of our very distinctive stones; Premium Amber, Lapis Lazuli and the Yellow Tiger Eye.</p>
+        </div>
+    </section>
+    <section id="show_mai_itm_con_sec" class="show_mai_itm_con_sec">
+        <div class="show_main_itm_div">
+            <a href="#">
+                <div class="photo_and_butn_div">
+                    <div class="show_main_itm_img_div">
+                        <img src="PREA-D2-12mm-S-sb-home.jpg" class="PREA_D2" alt="yello_blackslat">
+                    </div>
+                    <div class="show_main_buttom_con_div">
+                        <div class="but_div">
+                            <span>FIND OUT MORE</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="about_itm_div">
+                <h3>PREMIUM AMBER</h3>
+                <h5>Heal & Manifes</h5>
+                <p>Featuring one of our two types of Amber; Premium Amber, light yellow colour and with almost zero to none particle. Amber helps to balance the emotions, clear the mind, repel negative energy and develop intellectual abilities. As such, this might have been why it was a stone often worn by royalty and advisers! Just Amber alone can weigh as light as about 0.57 ounce or 16 grams.</p>
+            </div>
+        </div>
+        <div class="show_main_itm_div">
+            <a href="#">
+                <div class="photo_and_butn_div">
+                    <div class="show_main_itm_img_div">
+                        <img src="LPL-D3-12mm-S-sf-home.jpg" class="PREA_D2" alt="yello_blackslat">
+                    </div>
+                    <div class="show_main_buttom_con_div">
+                        <div class="but_div">
+                            <span>FIND OUT MORE</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="about_itm_div">
+                <h3>LAPIS LAZULI</h3>
+                <h5>Wisdom & Protection</h5>
+                <p>FThe colour of our Lapis’s deep Royal Blue with some Pyrite inclusion is an example of the finest colour we could offer. Lapis is a stone of protection, guarding against psychic attacks as it quickly releases stress, restore calmness and peace. Lapis lazuli has been highly priced in Egypt and was the favourite of both mystics and royalty dated back during 3000 – 4000 BC.</p>
+            </div>
+        </div>
+        <div class="show_main_itm_div">
+            <a href="#">
+                <div class="photo_and_butn_div">
+                    <div class="show_main_itm_img_div">
+                        <img src="YTE-D2-12mm-S-lb-home.jpg" class="PREA_D2" alt="yello_blackslat">
+                    </div>
+                    <div class="show_main_buttom_con_div">
+                        <div class="but_div">
+                            <span>FIND OUT MORE</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="about_itm_div">
+                <h3>YELLOW TIGER EYE</h3>
+                <h5>Strength & Confidence</h5>
+                <p>We carry perhaps one of the best quality Yellow Tiger Eye with beautiful patterns of the Tiger Stripes that resemble the “Lightning”. Much like a lightning rod, the stone ground your emotion in rough times so that you are able to make wiser decisions without fear of being overwhelmed by your challenges.</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="show_itm_con_div">
+        <div class="separator"></div>
+        <h3 style="text-align: center;color: #9a9898;">BEST SELLER</h3>
+        <p style="text-align: center;color: #9a9898;">These are our best selling bracelets bought from customers all over the world.</p>
+        <div class="itm_div itm_list_div">
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="AMT-D1-10mm-G-ss-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>AMETHYST – GOLD MINIMALIST 10MM (S)</span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="BL-D3-12mm-S-lbs-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>BLACK LAVA – SILVER MANIFEST 12MM (L)</span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="GN-D2-8mm-S-sbs-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>GARNET – SILVER URBANITE 8MM (S)
+                    </span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="GTE-D2-10mm-S-lbs-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>GOLDEN TIGER EYE – SILVER URBANITE
+                    </span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="LL-D1-10mm-RG-ss-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>LARIMAR – ROSE GOLD MINIMALIST 10MM (S)
+                    </span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="RTE-D2-10mm-S-sbs-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>RED TIGER EYE – SILVER URBANITE 10MM (S)
+                    </span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="SOD-D3-12mm-S-sbs-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>SODALITE – SILVER MANIFEST 12MM (S)
+                    </span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+            <div class="show_main_itm_div itm_div">
+                <a href="#">
+                    <div class="photo_and_butn_div itm_p_b_div">
+                        <div class="show_main_itm_img_div">
+                            <img src="YELJ-D1-10mm-RG-ls-600x465.jpg" class="PREA_D2 itm_p" alt="yello_blackslat">
+                        </div>
+                        <div class="show_main_buttom_con_div itm_b_div">
+                            <div class="but_div itm_b_c_div">
+                                <span>VIEW</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="about_itm_div itm_latt_div">
+                    <!-- <h3>YELLOW TIGER EYE</h3> -->
+                    <span>YELLOW JADE – ROSE GOLD MINIMALIST 10MM (L)
+                    </span>
+                    <span>4550 $</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <footer class="fot_fir_con">
+        <div class=" fot_fir_div fot_fir_lef_div">
+            <h3>Join MyEnchanter Insiders</h3>
+            <p>Keep up to date with new collections, special offers and fashion advice.</p>
+        </div>
+        <div class="fot_fir_div fot_fir_rih_div">
+            <label for="email">Email Address </label><br>
+            <input type="email" name="email" id="email" class="email" placeholder="enter your email">
+            <button class="fot_rig_but">Submit</button>
+        </div>
+    </footer>
+    <footer class="fot_sec_div">
+        <div class="Ab_div">
+            <h4>ABOUT US</h4>
+            <hr>
+            <a href="https://myenchanter.com/our-brand-story-2/" class="a_link">Our Brand Story</a><br>
+            <a href="https://myenchanter.com/stones-meanings">Stones & Meanings</a><br>
+            <select name="country" id="country" class="cou_sele">
+                <option id="Myn" class="sel_op" value="" selected>
+                    <div>
+                        MMK <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        VND <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        TWD <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        QAR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        INR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        OMR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        IDR <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+                <option id="Myn" class="sel_op" value="">
+                    <div>
+                        THB <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </option>
+            </select>
+        </div>
+        <div class="Ab_div cus_care">
+            <h4>CUSTOMER CARE</h4>
+            <hr>
+            <a href="https://myenchanter.com/return-refund/">Return & Refund</a><br>
+            <a href="https://myenchanter.com/care-repair/">Care & Repair</a><br>
+            <a href="https://myenchanter.com/size-guide/">Size Guide</a><br>
+            <a href="https://myenchanter.com/faqs/">FAQs</a><br>
+            <a href="https://myenchanter.com/privacy-policy/">Privacy Policy</a><br>
+            <a href="https://myenchanter.com/tracking/">Tracking Package</a>
+        </div>
+        <div class="Ab_div acc">
+            <h4>MY ACCOUNT</h4>
+            <hr>
+            <a href="https://myenchanter.com/my-account/">My Account</a><br>
+            <a href="https://myenchanter.com/create-an-account-with-us/">Create Account</a><br>
+            <a href="https://myenchanter.com/my-account/orders/">My Order</a><br>
+            <a href="https://myenchanter.com/cart/">Shopping Cat</a>
+        </div>
+        <div class="Ab_div new_upd">
+            <h4>NEWS & UPDATES</h4>
+            <hr>
+            <p>Sign up to get the latest on sales,new releses and more...</p>
+            <div class="up_mail_div">
+                <input type="email" name="sign_up_mail" id="sign_up_mail" class="up_mail_box" placeholder="Enter your email address..">
+                <button>Sign Up</button>
+            </div>
+        </div>
+    </footer>
+    <a href="#head_bar">
+        <div class="sticky_div">
+            <span style="display:inline-block;font-size: 30px;margin-top:5px;"><i class="fa-solid fa-arrow-up-short-wide"></i></span>
+        </div>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
